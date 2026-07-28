@@ -1,12 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
 
 type Project = { title: string; subtitle?: string; highlights: string[]; stack: string[]; image: string; imageFit?: "cover" | "contain" };
 
 const ProjectImageCarousel = ({ project }: { project: Project }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="relative aspect-video overflow-hidden border-b border-border/50 bg-white rounded-lg m-3 mb-0">
       <img src={encodeURI(project.image)} alt={project.title} className={project.imageFit === "contain" ? "w-full h-full object-contain object-center p-3 sm:p-4" : "w-full h-full object-cover"} />
@@ -17,37 +14,45 @@ const ProjectImageCarousel = ({ project }: { project: Project }) => {
 const ProjectsSection = () => {
   const projects: Project[] = [
     {
-      title: "Business Intelligence & Analytics Platform",
-      subtitle: "Customer Analytics Dashboard",
+      title: "Optimizing Healthcare Generative AI Framework",
+      subtitle: "MSc Research & GenAI Evaluation",
       highlights: [
-        "Built interactive dashboards with calculated measures and customer segmentation, reducing manual reporting by 40%.",
-        "Analysed 80,000+ transactions and 7,000+ records to uncover revenue drivers and purchasing patterns.",
-        "Informed strategy with data-driven insights on customer behaviour and high-value segments.",
+        "Researched accuracy and efficiency improvements for generative AI models in healthcare using AWS Bedrock and SageMaker with hyperparameter tuning.",
+        "Improved contextual relevance of AI-generated content through structured ranking methodologies and systematic evaluation; ensured ethical compliance with anonymized data.",
       ],
-      stack: ["Power BI", "DAX", "SQL", "Python", "Tableau"],
+      stack: ["AWS Bedrock", "AWS SageMaker", "Generative AI", "Hyperparameter Tuning", "Python"],
+      image: "/healthcare_analytics.png",
+      imageFit: "contain",
+    },
+    {
+      title: "Serverless E-commerce Platform",
+      subtitle: "Event-Driven Microservices on AWS",
+      highlights: [
+        "Built with Flask and React; deployed on AWS as event-driven serverless microservices (DynamoDB, Lambda, API Gateway) with CI/CD quality gates (Pylint, SonarCloud).",
+        "Performed end-to-end testing of UI workflows and API endpoints to validate application functionality before deployment (AWS EBS).",
+      ],
+      stack: ["Flask", "React", "AWS DynamoDB", "AWS Lambda", "API Gateway", "Pylint", "SonarCloud"],
       image: "/volt_metrics_project.png",
       imageFit: "contain",
     },
     {
-      title: "Detection System Using Explainable AI",
+      title: "ECS Migration Lab",
+      subtitle: "Infrastructure as Code & Observability",
       highlights: [
-        "Examined 11,000+ real-world URLs to identify behavioural and structural indicators of risk.",
-        "Improved early identification using data pre-processing, feature analysis, and exploratory analysis.",
-        "Developed hybrid detection pipeline using embeddings and ML models, achieving 97% accuracy.",
+        "Containerizing and migrating a Django application to AWS ECS with Terraform-provisioned infrastructure, GitHub Actions deployment, and CloudWatch/Datadog observability.",
       ],
-      stack: ["Python", "Machine Learning", "NLP", "EDA", "Feature Engineering"],
+      stack: ["Django", "AWS ECS", "Terraform", "GitHub Actions", "CloudWatch", "Datadog", "Docker"],
       image: "/Phishing Detection.png",
       imageFit: "contain",
     },
     {
-      title: "Sector Data Analytics",
-      subtitle: "Spending and Facility Analysis",
+      title: "Production-Oriented Enterprise RAG Prototype",
+      subtitle: "LLM Retrieval & Evaluation Metrics",
       highlights: [
-        "Analysed large-scale datasets to uncover spending patterns and facility-level trends.",
-        "Segmented items into cost-based clusters and identified high-cost outliers for analysis.",
-        "Developed classification models to evaluate facility characteristics using regression and ensemble methods.",
+        "Built a production-oriented enterprise RAG prototype using Python, FastAPI, PostgreSQL/pgvector and LLMs.",
+        "Implemented permission-aware retrieval, document provenance, knowledge freshness checks, conflict detection, source-grounded responses and evaluation metrics for accuracy, hallucination and traceability.",
       ],
-      stack: ["Python", "SQL", "Logistic Regression", "Random Forest", "Data Analysis"],
+      stack: ["Python", "FastAPI", "PostgreSQL", "pgvector", "LLMs", "RAG Pipeline", "Evaluation Metrics"],
       image: "/healthcare_analytics.png",
       imageFit: "contain",
     },
@@ -60,7 +65,7 @@ const ProjectsSection = () => {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">Projects</h2>
             <div className="w-16 h-px bg-[hsl(var(--primary))] mx-auto mb-5" />
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">Analytics, dashboards, and applied machine learning projects.</p>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">Generative AI frameworks, serverless cloud platforms, containerized ECS migrations, and RAG prototypes.</p>
           </div>
           <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-6">
             {projects.map((project) => (
@@ -80,7 +85,7 @@ const ProjectsSection = () => {
                     ))}
                   </ul>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-foreground/80 mb-2">Skills used</p>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-foreground/80 mb-2">Technologies & Tools</p>
                     <div className="flex flex-wrap gap-1.5">{project.stack.map((tech) => <Badge key={tech} variant="secondary" className="font-normal text-xs rounded-md bg-[hsl(var(--skill-bg))] text-foreground border border-border/60">{tech}</Badge>)}</div>
                   </div>
                 </CardContent>

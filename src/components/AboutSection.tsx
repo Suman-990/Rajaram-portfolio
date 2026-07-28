@@ -1,19 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Mail, Linkedin, GraduationCap, Calendar, Globe, Award, Phone } from "lucide-react";
-import { CONTACT_EMAIL } from "@/config/site";
+import { CONTACT_EMAIL, CONTACT_PHONE, LOCATION, LINKEDIN_URL } from "@/config/site";
 
 const AboutSection = () => {
   const quickFacts = [
-    { icon: MapPin, label: "Location", value: "Dublin, Ireland" },
-    { icon: GraduationCap, label: "Education", value: "Master's Degree" },
-    { icon: Calendar, label: "Experience", value: "3+ years" },
-    { icon: Globe, label: "Focus", value: "Analysis & Delivery" },
+    { icon: MapPin, label: "Location", value: LOCATION },
+    { icon: GraduationCap, label: "Education", value: "MSc Cloud Computing" },
+    { icon: Calendar, label: "Experience", value: "2+ years" },
+    { icon: Globe, label: "Focus", value: "AI & Cloud DevOps" },
   ];
 
   const contactInfo = [
-    { icon: Phone, value: "+353 00 000 0000", href: "tel:+353000000000" },
+    { icon: Phone, value: CONTACT_PHONE, href: `tel:${CONTACT_PHONE.replace(/\s+/g, '')}` },
     { icon: Mail, value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
-    { icon: Linkedin, value: "LinkedIn", href: "https://www.linkedin.com/in/your-profile" },
+    { icon: Linkedin, value: "LinkedIn Profile", href: LINKEDIN_URL },
   ];
 
   return (
@@ -27,18 +27,13 @@ const AboutSection = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-5 text-base text-muted-foreground leading-relaxed">
               <p>
-                Motivated professional with 3+ years of experience turning complex information into clear,
-                actionable insights. I have worked across reporting, process improvement, and cross-functional
-                delivery — always with a focus on accuracy, communication, and measurable outcomes.
+                AI Engineer candidate with 2+ years' experience delivering cloud, DevOps, and AI-driven solutions for enterprise clients. I bring hands-on expertise integrating LLM and generative AI services (AWS Bedrock, SageMaker) into production workflows.
               </p>
               <p>
-                My strengths lie in structured analysis, building reliable reporting frameworks, and collaborating
-                with teams to identify inefficiencies and implement practical solutions. I am comfortable working
-                independently on detailed tasks and contributing to broader strategic discussions.
+                Supported by an MSc research thesis in generative AI for healthcare and a Minor in AI & Data Science (IIT Mandi, 2026). I have designed and deployed CI/CD automation, REST APIs, and production monitoring (Datadog, CloudWatch) that improved deployment speed, reliability, and client satisfaction.
               </p>
               <p>
-                I hold a Master's degree and am actively looking for roles where analytical thinking, attention
-                to detail, and a commitment to continuous improvement are valued.
+                Comfortable bridging DevOps and AI engineering, collaborating with cross-functional teams, and producing clear technical documentation to support robust, scalable solutions.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                 {contactInfo.map((contact, index) => (

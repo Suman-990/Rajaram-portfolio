@@ -3,10 +3,22 @@ import { Badge } from "@/components/ui/badge";
 
 const SkillsSection = () => {
   const skillCategories = [
-    { title: "Core Skills", skills: ["Communication", "Problem Solving", "Critical Thinking", "Organisation"] },
-    { title: "Professional", skills: ["Project Management", "Presentation", "Research", "Report Writing"] },
-    { title: "Technical", skills: ["Excel", "Power BI", "SQL", "Python"] },
-    { title: "Other", skills: ["Data Analysis", "KPI Reporting", "Root Cause Analysis", "Process Improvement"] },
+    {
+      title: "AI & Data Engineering",
+      skills: ["LLM Integration", "NLP Workflows", "Model Evaluation", "Hyperparameter Tuning", "Generative AI", "Structured/Unstructured Data Processing"]
+    },
+    {
+      title: "Programming & Frameworks",
+      skills: ["Python (Django, Flask, SQLAlchemy)", "JavaScript (ES6, React, Node.js)", "PowerShell Scripting", "REST APIs"]
+    },
+    {
+      title: "Cloud & DevOps",
+      skills: ["AWS (Bedrock, SageMaker, EC2, S3, Lambda, API Gateway, DynamoDB, CloudWatch, ECS)", "Terraform", "CloudFormation", "Docker", "Git (GitHub, Bitbucket)", "Datadog"]
+    },
+    {
+      title: "Testing, Databases & Systems",
+      skills: ["Postman", "Playwright", "Pylint", "SonarCloud", "PostgreSQL", "MySQL", "SQL ETL Optimization", "Bash/Shell", "Agile / Jira"]
+    },
   ];
 
   return (
@@ -16,7 +28,7 @@ const SkillsSection = () => {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">Skills</h2>
             <div className="w-16 h-px bg-[hsl(var(--primary))] mx-auto mb-5" />
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">A blend of analytical, technical, and interpersonal capabilities.</p>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">Technical skills across AI engineering, cloud infrastructure, DevOps, and full-stack development.</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-6">
             {skillCategories.map((category, index) => (

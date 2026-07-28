@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 import profileImage from "/image.png";
 import heroBackground from "@/assets/hero-background-modern.jpg";
+import { RESUME_PATH } from "@/config/site";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -24,31 +25,33 @@ const HeroSection = () => {
         <div className="mb-8 flex justify-center animate-fade-in">
           <img
             src={profileImage}
-            alt="Your Name"
+            alt="Rajaram Jagadeeswaran"
             className="w-52 h-52 md:w-56 md:h-56 rounded-full border-2 border-white/40 shadow-lg object-cover object-center"
           />
         </div>
 
         <h1 className="text-4xl md:text-6xl font-semibold text-white mb-3 tracking-tight animate-fade-in font-space-grotesk">
-          Your Name
+          Rajaram Jagadeeswaran
         </h1>
 
         <p className="text-lg md:text-xl text-white/95 mb-6 max-w-2xl mx-auto font-medium animate-slide-up">
-          Your Title
+          AI Engineer | Cloud & DevOps Specialist
         </p>
 
-        <p className="text-base md:text-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed animate-slide-up px-2">
-          Motivated professional with 3+ years of experience turning ideas into outcomes — leading projects,
-          collaborating across teams, and delivering work that is clear, reliable, and impactful.
+        <p className="text-base md:text-lg text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed animate-slide-up px-2">
+          AI Engineer candidate with 2+ years' experience delivering cloud, DevOps, and AI-driven solutions for enterprise clients. Hands-on expertise integrating LLM and generative AI services (AWS Bedrock, SageMaker) into production workflows, backed by an MSc thesis in generative AI and a Minor in AI & Data Science (IIT Mandi).
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12 animate-slide-up" style={{ animationDelay: "0.15s" }}>
           <Button type="button" onClick={scrollToProjects} size="lg" className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/90 text-primary-foreground font-medium px-8 py-6 text-base rounded-lg shadow-md transition-all duration-200 hover:scale-[1.02] border-0">
             View Projects
           </Button>
-          <Button type="button" size="lg" variant="outline" className="border border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 font-medium px-8 py-6 text-base rounded-lg transition-all duration-200 hover:scale-[1.02]" onClick={(e) => e.preventDefault()}>
-            Resume
-          </Button>
+          <a href={RESUME_PATH} target="_blank" rel="noopener noreferrer">
+            <Button type="button" size="lg" variant="outline" className="border border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 font-medium px-8 py-6 text-base rounded-lg transition-all duration-200 hover:scale-[1.02] w-full sm:w-auto flex items-center justify-center gap-2">
+              <Download className="w-4 h-4" />
+              Download Resume
+            </Button>
+          </a>
         </div>
       </div>
 

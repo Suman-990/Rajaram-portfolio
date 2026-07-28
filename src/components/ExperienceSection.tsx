@@ -6,21 +6,78 @@ import { Building2, Calendar, MapPin, TrendingUp } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      company: "Global Tech Solutions",
-      position: "Analyst",
+      company: "WNS Vuram Technologies",
+      position: "Associate Technical Consultant – DevOps & Integration",
       location: "India",
-      duration: "Nov 2022 – Dec 2024",
-      logoSrc: "/infosys_logo.png",
-      logoAlt: "Global Tech Solutions",
+      duration: "Jul 2021 – Aug 2023",
+      logoSrc: "/wns_logo.svg",
+      logoAlt: "WNS Vuram Technologies",
       achievements: [
-        { impact: "20% reduction in repeated requests", description: "Analysed 1,000+ operational records quarterly, identifying risk trends and patterns that informed process improvements." },
-        { impact: "KPI reporting framework", description: "Developed and maintained structured reporting frameworks tracking 5–10 operational KPIs, improving visibility across teams." },
-        { impact: "20% faster approval processing", description: "Identified workflow inefficiencies and implemented standardised policies that accelerated manual approval cycles." },
-        { impact: "5+ hours saved per week", description: "Translated weekly operational data into concise executive reports for multiple stakeholders." },
-        { impact: "Cross-functional collaboration", description: "Collaborated with a team of 5–10 members to monitor trends and conduct root cause analysis." },
+        {
+          impact: "Deployment time reduced from 5h to <3h (+40% sprint delivery)",
+          description: "Designed and deployed CI/CD pipelines for KONE, reducing deployment time from 5 hours to under 3 and increasing sprint delivery by 40%."
+        },
+        {
+          impact: "30% reduction in manual geospatial processing",
+          description: "Integrated LLM-powered services into geospatial workflows, reducing manual processing by 30% and improving task completion accuracy."
+        },
+        {
+          impact: "20% reduction in Django REST API latency",
+          description: "Built and integrated Django REST API services with structured error handling, reducing average API latency by 20% and increasing reliability."
+        },
+        {
+          impact: "Page Object Model test automation",
+          description: "Developed reusable automation components using Page Object Model principles to enhance maintainability and scalability."
+        },
+        {
+          impact: "15% faster incident resolution",
+          description: "Enhanced production monitoring with Datadog and CloudWatch, achieving 15% faster incident resolution across release cycles."
+        },
+        {
+          impact: "Cross-functional architecture & Jira release notes",
+          description: "Produced design specifications, architecture documentation, and release notes in Jira while collaborating with infrastructure and support teams to align releases with backend upgrades."
+        },
+        {
+          impact: "25% workflow throughput increase for Plan SA",
+          description: "Delivered low-code Appian enhancements for Plan SA's land acquisition system, improving workflow throughput by 25%."
+        }
       ],
-      technologies: ["Excel", "Power BI", "SQL", "Data Analysis", "KPI Reporting", "Root Cause Analysis"],
+      technologies: ["AWS", "CI/CD Pipelines", "Django REST API", "LLM Integration", "Page Object Model", "Datadog", "CloudWatch", "Appian", "Jira"],
     },
+    {
+      company: "Tata Consultancy Services",
+      position: "Developer Intern",
+      location: "India",
+      duration: "May 2021 – Jul 2021",
+      logoSrc: "/tcs_logo.svg",
+      logoAlt: "Tata Consultancy Services",
+      achievements: [
+        {
+          impact: "+15% prediction accuracy for computer vision app",
+          description: "Contributed to a Python-based computer vision application for AIG, detecting user experience via facial expressions and improving prediction accuracy by 15%."
+        },
+        {
+          impact: "25% increase in test coverage & reduced UAT bug rates",
+          description: "Supported QA automation, increasing test coverage by 25% and reducing UAT bug rates."
+        }
+      ],
+      technologies: ["Python", "Computer Vision", "QA Automation", "Test Coverage", "UAT Testing"],
+    },
+    {
+      company: "Bidvest Noonan",
+      position: "Site Supervisor (part-time)",
+      location: "Dublin, Ireland",
+      duration: "Jun 2025 – Present",
+      logoSrc: "/bidvest_logo.svg",
+      logoAlt: "Bidvest Noonan",
+      achievements: [
+        {
+          impact: "Operational compliance & team leadership",
+          description: "Coordinated teams, managed stakeholder reporting, and ensured compliance in a live operational environment."
+        }
+      ],
+      technologies: ["Team Leadership", "Stakeholder Reporting", "Operational Compliance"],
+    }
   ];
 
   return (
@@ -31,7 +88,7 @@ const ExperienceSection = () => {
             Work <span className="bg-gradient-to-r from-[hsl(202_100%_42%)] to-[hsl(202_85%_28%)] bg-clip-text text-transparent">Experience</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Operational insights, structured reporting, and data-driven process improvements.
+            Cloud infrastructure, CI/CD automation, AI service integration, and software engineering.
           </p>
         </div>
         <div className="space-y-8">
@@ -80,7 +137,7 @@ const ExperienceSection = () => {
                   </Carousel>
                 </div>
                 <div className="pt-4 border-t border-border">
-                  <h4 className="text-sm font-semibold text-muted-foreground mb-3">Skills used</h4>
+                  <h4 className="text-sm font-semibold text-muted-foreground mb-3">Skills & Tools Used</h4>
                   <div className="flex flex-wrap gap-2">{exp.technologies.map((t, i) => <Badge key={i} variant="secondary" className="text-xs font-normal rounded-md bg-[hsl(var(--skill-bg))] text-foreground border border-border/60">{t}</Badge>)}</div>
                 </div>
               </CardContent>

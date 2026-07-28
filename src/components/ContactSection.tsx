@@ -1,12 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Linkedin, Phone } from "lucide-react";
-import { CONTACT_EMAIL } from "@/config/site";
+import { CONTACT_EMAIL, CONTACT_PHONE, LINKEDIN_URL } from "@/config/site";
 
 const ContactSection = () => {
   const links = [
-    { icon: Phone, label: "Phone", value: "+353 00 000 0000", href: "tel:+353000000000" },
+    { icon: Phone, label: "Phone", value: CONTACT_PHONE, href: `tel:${CONTACT_PHONE.replace(/\s+/g, '')}` },
     { icon: Mail, label: "Email", value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/your-profile", href: "https://www.linkedin.com/in/your-profile" },
+    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/rajaram-jagadeeswaran-684b14165", href: LINKEDIN_URL },
   ];
 
   return (
@@ -16,7 +16,7 @@ const ContactSection = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">Contact</h2>
             <div className="w-16 h-px bg-[hsl(var(--primary))] mx-auto mb-5" />
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">Open to new opportunities and conversations.</p>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">Open to AI Engineering, Cloud, and DevOps opportunities.</p>
           </div>
           <div className="max-w-3xl mx-auto grid sm:grid-cols-3 gap-5">
             {links.map((item) => (
