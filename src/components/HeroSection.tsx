@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Download } from "lucide-react";
-import profileImage from "/image.png";
+import profileImage from "/profile.jpeg";
 import heroBackground from "@/assets/hero-background-modern.jpg";
 import { RESUME_PATH } from "@/config/site";
 
