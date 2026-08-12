@@ -14,32 +14,24 @@ const ExperienceSection = () => {
       logoAlt: "WNS Vuram Technologies",
       achievements: [
         {
-          impact: "Deployment time reduced from 5h to <3h (+40% sprint delivery)",
-          description: "Designed and deployed CI/CD pipelines for KONE, reducing deployment time from 5 hours to under 3 and increasing sprint delivery by 40%."
+          impact: "Unified country-specific order-placement platform",
+          description: "Engineered a scalable order-placement platform integrating country-specific workflows into a unified form, streamlining regional process variation without fragmenting the codebase and supporting robust data pipelines."
         },
         {
-          impact: "30% reduction in manual geospatial processing",
-          description: "Integrated LLM-powered services into geospatial workflows, reducing manual processing by 30% and improving task completion accuracy."
+          impact: "Competency-based role access control",
+          description: "Implemented role-based access control for the user-management platform, introducing competency-based permissions and leveraging SQL to efficiently govern access across the client's organization."
         },
         {
-          impact: "20% reduction in Django REST API latency",
-          description: "Built and integrated Django REST API services with structured error handling, reducing average API latency by 20% and increasing reliability."
-        },
-        {
-          impact: "Page Object Model test automation",
-          description: "Developed reusable automation components using Page Object Model principles to enhance maintainability and scalability."
+          impact: "20% reduction in API latency",
+          description: "Developed Django REST API services for country-specific order routing and access management, incorporating structured error handling and cloud data platform best practices to reduce average API latency by 20%."
         },
         {
           impact: "15% faster incident resolution",
-          description: "Enhanced production monitoring with Datadog and CloudWatch, achieving 15% faster incident resolution across release cycles."
-        },
-        {
-          impact: "Cross-functional architecture & Jira release notes",
-          description: "Produced design specifications, architecture documentation, and release notes in Jira while collaborating with infrastructure and support teams to align releases with backend upgrades."
+          description: "Enhanced production monitoring using Datadog and CloudWatch, enabling incident resolution 15% faster and improving operational reliability with machine-learning-driven alerting."
         },
         {
           impact: "25% workflow throughput increase for Plan SA",
-          description: "Delivered low-code Appian enhancements for Plan SA's land acquisition system, improving workflow throughput by 25%."
+          description: "Delivered low-code Appian enhancements for Plan SA's land-acquisition system, applying NLP to automate workflow steps and increasing throughput by 25% for 10 users managing land records."
         }
       ],
       technologies: ["AWS", "CI/CD Pipelines", "Django REST API", "LLM Integration", "Page Object Model", "Datadog", "CloudWatch", "Appian", "Jira"],
@@ -96,7 +88,7 @@ const ExperienceSection = () => {
             <Card key={index} className="rounded-lg border border-border/70 bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow duration-200">
               <CardHeader className="pb-4">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center items-start gap-4">
                     <div className="h-20 w-[9.5rem] sm:w-[10.5rem] shrink-0 rounded-xl bg-white border border-border px-2.5 py-2 shadow-sm flex items-center justify-start">
                       <img src={exp.logoSrc} alt={exp.logoAlt} className="h-14 sm:h-16 w-auto max-w-none object-contain object-left" />
                     </div>

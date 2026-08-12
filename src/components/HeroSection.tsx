@@ -39,15 +39,15 @@ const HeroSection = () => {
         </p>
 
         <p className="text-base md:text-lg text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed animate-slide-up px-2">
-          AI Engineer candidate with 2+ years' experience delivering cloud, DevOps, and AI-driven solutions for enterprise clients. Hands-on expertise integrating LLM and generative AI services (AWS Bedrock, SageMaker) into production workflows, backed by an MSc thesis in generative AI and a Minor in AI & Data Science (IIT Mandi).
+          AI Engineer candidate with 3+ years' experience delivering cloud, DevOps, and AI-driven solutions for enterprise clients. Hands-on expertise integrating LLM and generative AI services (AWS Bedrock, SageMaker) into production workflows, backed by an MSc thesis in generative AI and a Minor in AI & Data Science (IIT Mandi).
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12 animate-slide-up" style={{ animationDelay: "0.15s" }}>
-          <Button type="button" onClick={scrollToProjects} size="lg" className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/90 text-primary-foreground font-medium px-8 py-6 text-base rounded-lg shadow-md transition-all duration-200 hover:scale-[1.02] border-0">
+          <Button type="button" onClick={scrollToProjects} size="lg" className="w-full sm:w-auto bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/90 text-primary-foreground font-medium px-8 py-6 text-base rounded-lg shadow-md transition-all duration-200 hover:scale-[1.02] border-0">
             View Projects
           </Button>
-          <a href={RESUME_PATH} target="_blank" rel="noopener noreferrer">
-            <Button type="button" size="lg" variant="outline" className="border border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 font-medium px-8 py-6 text-base rounded-lg transition-all duration-200 hover:scale-[1.02] w-full sm:w-auto flex items-center justify-center gap-2">
+          <a href={RESUME_PATH} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <Button type="button" size="lg" variant="outline" className="border border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 font-medium px-8 py-6 text-base rounded-lg transition-all duration-200 hover:scale-[1.02] w-full flex items-center justify-center gap-2">
               <Download className="w-4 h-4" />
               Download Resume
             </Button>

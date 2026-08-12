@@ -1,12 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Mail, Linkedin, GraduationCap, Calendar, Globe, Award, Phone } from "lucide-react";
-import { CONTACT_EMAIL, CONTACT_PHONE, LOCATION, LINKEDIN_URL } from "@/config/site";
+import { MapPin, Mail, Linkedin, Github, GraduationCap, Calendar, Globe, Award, Phone } from "lucide-react";
+import { CONTACT_EMAIL, CONTACT_PHONE, LOCATION, LINKEDIN_URL, GITHUB_URL } from "@/config/site";
 
 const AboutSection = () => {
   const quickFacts = [
     { icon: MapPin, label: "Location", value: LOCATION },
     { icon: GraduationCap, label: "Education", value: "MSc Cloud Computing" },
-    { icon: Calendar, label: "Experience", value: "2+ years" },
+    { icon: Calendar, label: "Experience", value: "3+ years" },
     { icon: Globe, label: "Focus", value: "AI & Cloud DevOps" },
   ];
 
@@ -14,6 +14,7 @@ const AboutSection = () => {
     { icon: Phone, value: CONTACT_PHONE, href: `tel:${CONTACT_PHONE.replace(/\s+/g, '')}` },
     { icon: Mail, value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
     { icon: Linkedin, value: "LinkedIn Profile", href: LINKEDIN_URL },
+    { icon: Github, value: "GitHub Profile", href: GITHUB_URL },
   ];
 
   return (
@@ -27,7 +28,7 @@ const AboutSection = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-5 text-base text-muted-foreground leading-relaxed">
               <p>
-                AI Engineer candidate with 2+ years' experience delivering cloud, DevOps, and AI-driven solutions for enterprise clients. I bring hands-on expertise integrating LLM and generative AI services (AWS Bedrock, SageMaker) into production workflows.
+                AI Engineer candidate with 3+ years' experience delivering cloud, DevOps, and AI-driven solutions for enterprise clients. I bring hands-on expertise integrating LLM and generative AI services (AWS Bedrock, SageMaker) into production workflows.
               </p>
               <p>
                 Supported by an MSc research thesis in generative AI for healthcare and a Minor in AI & Data Science (IIT Mandi, 2026). I have designed and deployed CI/CD automation, REST APIs, and production monitoring (Datadog, CloudWatch) that improved deployment speed, reliability, and client satisfaction.

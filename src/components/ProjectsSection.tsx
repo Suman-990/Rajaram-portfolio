@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
 
-type Project = { title: string; subtitle?: string; highlights: string[]; stack: string[]; image: string; imageFit?: "cover" | "contain" };
+type Project = { title: string; subtitle?: string; highlights: string[]; stack: string[]; image: string; imageFit?: "cover" | "contain"; link?: string; };
 
 const ProjectImageCarousel = ({ project }: { project: Project }) => {
   return (
@@ -46,15 +47,15 @@ const ProjectsSection = () => {
       imageFit: "contain",
     },
     {
-      title: "Production-Oriented Enterprise RAG Prototype",
-      subtitle: "LLM Retrieval & Evaluation Metrics",
+      title: "BankSpec AI — AI Copilot for Banking Requirements & Test Generation (2026)",
       highlights: [
-        "Built a production-oriented enterprise RAG prototype using Python, FastAPI, PostgreSQL/pgvector and LLMs.",
-        "Implemented permission-aware retrieval, document provenance, knowledge freshness checks, conflict detection, source-grounded responses and evaluation metrics for accuracy, hallucination and traceability.",
+        "Built and deployed an AI system that extracts structured requirements from banking documents (Claude API, each grounded in a source citation to prevent hallucination) and auto-generates positive, negative, boundary, and authorization pytest cases — catching real defects including an authorization-bypass where one customer's token could modify another's card.",
+        "Engineered production-grade AI governance: human-in-the-loop approval before any test executes, PII scanning on ingest, and a full audit trail of every model call, prompt version, and approval decision.",
       ],
-      stack: ["Python", "FastAPI", "PostgreSQL", "pgvector", "LLMs", "RAG Pipeline", "Evaluation Metrics"],
+      stack: ["Python", "Claude API", "Streamlit", "pytest", "REST APIs"],
       image: "/healthcare_analytics.png",
       imageFit: "contain",
+      link: "https://github.com/Rajaram-Jagadeeswaran/bankspec-ai"
     },
   ];
 
@@ -65,14 +66,21 @@ const ProjectsSection = () => {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-3">Projects</h2>
             <div className="w-16 h-px bg-[hsl(var(--primary))] mx-auto mb-5" />
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">Generative AI frameworks, serverless cloud platforms, containerized ECS migrations, and RAG prototypes.</p>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">Generative AI frameworks, serverless cloud platforms, containerized ECS migrations, and AI Copilots.</p>
           </div>
           <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-6">
             {projects.map((project) => (
               <Card key={project.title} className="rounded-lg border border-border/70 bg-card shadow-sm overflow-hidden flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
                 <ProjectImageCarousel project={project} />
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg font-semibold text-foreground leading-snug">{project.title}</CardTitle>
+                  <div className="flex justify-between items-start gap-4">
+                    <CardTitle className="text-lg font-semibold text-foreground leading-snug">{project.title}</CardTitle>
+                    {project.link && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[hsl(var(--primary))] transition-colors shrink-0" aria-label="View Project">
+                        <ExternalLink className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
                   {project.subtitle && <p className="text-sm font-medium text-[hsl(var(--primary))] mt-1">{project.subtitle}</p>}
                 </CardHeader>
                 <CardContent className="flex flex-col gap-4 flex-1 pt-0">
